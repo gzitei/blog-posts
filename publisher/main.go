@@ -24,8 +24,6 @@ type PostList struct {
 func main() {
 	dir := os.Args[1]
 
-	const githubRawLink = "https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/"
-
 	metadataJson := path.Join(dir, "metadata.json")
 	metadata, err := os.ReadFile(metadataJson)
 	if err != nil {
@@ -69,7 +67,7 @@ func main() {
 			Tags: []string{},
 		}
 		readme := path.Join(dirName, "README.md")
-		post.RawLink = githubRawLink + readme
+		post.RawLink = readme
 
 		for _, file := range files {
 			fileName := file.Name()
@@ -77,7 +75,7 @@ func main() {
 			if strings.HasPrefix(fileName, "#") {
 				post.Tags = append(post.Tags, fileName)
 			} else if strings.HasSuffix(fileName, "webp") {
-				post.Image = githubRawLink + filePath
+				post.Image = filePath
 			} else if fileName == "README.md" {
 				file, err := os.Open(filePath)
 				if err != nil {

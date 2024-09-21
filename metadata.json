@@ -3,9 +3,9 @@
     {
       "id": "posts/remove-the-islands-with-go",
       "title": "Remove the Islands Case with Go",
-      "raw-link": "https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/remove-the-islands-with-go/README.md",
+      "raw-link": "posts/remove-the-islands-with-go/README.md",
       "tags": ["#algorithm", "#dynamic-programming", "#go"],
-      "image": "https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/remove-the-islands-with-go/gopher.webp"
+      "image": "posts/remove-the-islands-with-go/gopher.webp"
     }
   ]
 }
