@@ -14,25 +14,25 @@ Some time ago I came accross this interview case calsse Remove the Islands: give
 
 This is the input for the case:
 
-\[
+[
     \[1, 0, 0, 0, 0, 0\],
     \[0, 1, 0, 1, 1, 1\],
     \[0, 0, 1, 0, 1, 0\],
     \[1, 1, 0, 0, 1, 0\],
     \[1, 0, 1, 1, 0, 0\],
     \[1, 0, 0, 0, 0, 1\]
-\]
+]
 
 And this is the expected output:
 
-\[
+[
     \[1, 0, 0, 0, 0, 0\],
     \[0, 0, 0, 1, 1, 1\],
     \[0, 0, 0, 0, 1, 0\],
     \[1, 1, 0, 0, 1, 0\],
     \[1, 0, 0, 0, 0, 0\],
     \[1, 0, 0, 0, 0, 1\]
-\]
+]
 
 ### My solution for the case
 
