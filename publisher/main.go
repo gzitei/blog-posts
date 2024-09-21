@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"os"
 	"path"
@@ -78,14 +79,19 @@ func main() {
 			} else if strings.HasSuffix(fileName, "webp") {
 				post.Image = githubRawLink + filePath
 			} else if fileName == "README.md" {
-				content, err := os.ReadFile(filePath)
+				file, err := os.Open(filePath)
 				if err != nil {
 					os.Stderr.WriteString(err.Error())
 					return
 				}
-				title := strings.SplitN(string(content), "\n", 1)[0]
-				title = strings.ReplaceAll(title, "#", "")
-				post.Title = title
+				defer file.Close()
+
+				scanner := bufio.NewScanner(file)
+				if scanner.Scan() {
+					firstLine := scanner.Text()
+					title := strings.TrimLeft(firstLine, "# ")
+					post.Title = strings.TrimSpace(title)
+				}
 			}
 		}
 		posts.Posts = append(posts.Posts, post)
