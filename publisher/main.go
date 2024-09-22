@@ -65,7 +65,7 @@ func main() {
 		}
 
 		post := Post{
-			ID:   dirName,
+			ID:   dir.Name(),
 			Tags: []string{},
 		}
 

@@ -2,7 +2,7 @@
   "posts": [
     {
       "posted-at": "2024-09-22",
-      "id": "posts/remove-the-islands-with-go",
+      "id": "remove-the-islands-with-go",
       "title": "Remove the Islands Case with Go",
       "tags": [
         "#algorithm",
