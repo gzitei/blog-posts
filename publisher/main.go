@@ -15,7 +15,6 @@ type Post struct {
 	PostedAt string   `json:"posted-at"`
 	ID       string   `json:"id"`
 	Title    string   `json:"title"`
-	RawLink  string   `json:"raw-link"`
 	Tags     []string `json:"tags"`
 	Image    string   `json:"image"`
 }
@@ -69,8 +68,6 @@ func main() {
 			ID:   dirName,
 			Tags: []string{},
 		}
-		readme := path.Join(dirName, "README.md")
-		post.RawLink = readme
 
 		for _, file := range files {
 			fileName := file.Name()
@@ -78,7 +75,7 @@ func main() {
 			if strings.HasPrefix(fileName, "#") {
 				post.Tags = append(post.Tags, fileName)
 			} else if strings.HasSuffix(fileName, "webp") {
-				post.Image = filePath
+				post.Image = fileName
 			} else if fileName == "README.md" {
 				file, err := os.Open(filePath)
 				if err != nil {

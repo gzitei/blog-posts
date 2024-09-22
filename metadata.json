@@ -1,16 +1,15 @@
 {
   "posts": [
     {
-      "posted-at": "2024-09-21",
+      "posted-at": "2024-09-22",
       "id": "posts/remove-the-islands-with-go",
       "title": "Remove the Islands Case with Go",
-      "raw-link": "posts/remove-the-islands-with-go/README.md",
       "tags": [
         "#algorithm",
         "#dynamic-programming",
         "#go"
       ],
-      "image": "posts/remove-the-islands-with-go/gopher.webp"
+      "image": "gopher.webp"
     }
   ]
 }
