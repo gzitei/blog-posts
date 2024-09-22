@@ -3,18 +3,21 @@ package main
 import (
 	"bufio"
 	"encoding/json"
+	"fmt"
 	"os"
 	"path"
 	"slices"
 	"strings"
+	"time"
 )
 
 type Post struct {
-	ID      string   `json:"id"`
-	Title   string   `json:"title"`
-	RawLink string   `json:"raw-link"`
-	Tags    []string `json:"tags"`
-	Image   string   `json:"image"`
+	PostedAt string   `json:"posted-at"`
+	ID       string   `json:"id"`
+	Title    string   `json:"title"`
+	RawLink  string   `json:"raw-link"`
+	Tags     []string `json:"tags"`
+	Image    string   `json:"image"`
 }
 
 type PostList struct {
@@ -92,6 +95,9 @@ func main() {
 				}
 			}
 		}
+		now := time.Now()
+		strTime := fmt.Sprintf("%04d-%02d-%02d", now.Year(), now.Month(), now.Day())
+		post.PostedAt = strTime
 		posts.Posts = append(posts.Posts, post)
 	}
 	str, err := json.MarshalIndent(posts, "", "  ")
