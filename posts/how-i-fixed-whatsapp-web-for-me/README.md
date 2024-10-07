@@ -115,7 +115,7 @@ document.body.addEventListener("click", (e) => {
   currentView = selected;
 });
 ```
-With the current implementation, I have all I need! Now, I am able to use WhatsApp side by side with my editor, I just need to install my extension and... OH NO!
+With the current implementation, I have all I need! Now, I am able to use WhatsApp side by side with my editor, I just need to install my extension and... OH NO! The text input field looks awful!
 
 ![Figure 2: Input field is broken](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/input-bar.webp)
 
@@ -127,7 +127,16 @@ if (main) {
   main.style.maxWidth = `calc(100vw - var(--navbar-width))`;
 }
 ```
+By setting the maximum width of the chat window element to fill the available viewport discounted by the lateral navbar width, the text input field was fixed!
 
-Now I have everything working perfectly to fit my workflow! I just made some other minor adjustments to improve on the apps UI in fullscreen mode, removing some unnecessary margins around the main content. If you are interested, you may check my [github repository](https://github.com/gzitei/whatsapp-web-sidebar-toggle/), there are some instructions on how to use the extension.
+![Figure 3: Input field is broken](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/fixed-input-bar.webp)
 
-Also, if you have suggestions or feedback about this project, feel free to reach out to me on my social media, the links are down bellow.
+Now I have everything working perfectly to fit my workflow! You can see the final result below:
+
+![Figure 3: Input field is broken](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/final-result.webp)
+
+I finished by implementing some other adjustments to improve on the apps UI in fullscreen mode, removing some unnecessary margins around the main content.
+
+If you are interested, you may check my [github repository](https://github.com/gzitei/whatsapp-web-sidebar-toggle/), there are some instructions on how to use the extension.
+
+Also, if you have suggestions or feedback about this project, feel free to reach out to me on my social media.
