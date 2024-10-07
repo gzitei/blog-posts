@@ -131,9 +131,9 @@ By setting the maximum width of the chat window element to fill the available vi
 
 ![Figure 3: Input field is broken](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/fixed-input-bar.webp)
 
-Now I have everything working perfectly to fit my workflow! You can see the final result below:
+Now I have everything working perfectly to fit my workflow! The next image presents the final result with the extension running.
 
-![Figure 3: Input field is broken](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/final-result.webp)
+![Figure 4: Final result](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/final-result.webp)
 
 I finished by implementing some other adjustments to improve on the apps UI in fullscreen mode, removing some unnecessary margins around the main content.
 
