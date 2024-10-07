@@ -115,3 +115,6 @@ func removeIslands(board Board) Board {
 Using memoization was crucial for this case, in order to achieve a time complexity of O(n*m), where _n_ and _m_ represents the dimensions of the board.
 
 If you are interested, you can check out [my solution on github](https://github.com/gzitei/just_studying/blob/main/remove-the-islands/). I'm really interested in hearing suggestions and other aproaches to solve the problem, please send me a DM with your ideas!
+
+> [!NOTE]
+> TESTE!!!
