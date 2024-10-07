@@ -7,9 +7,9 @@ To fit all my developer tools and documentations in my screen, I like to use a t
 Even though I'm pretty sure people at Meta must have a good reason for that, but WhatsApp Web's responsiveness leaves room for improvement.
 
 I like to have it tilled as a little vertical bar side by side with my text editor so I can answer my girlfriend even when I am working (sorry my friends, she takes all my WhatsApp attention).
-That's where responsiveness falls short. The contact's sidebar takes almost all the viewport, there is no space left for the user to interact with the conversation, as shown in [Figure 1](#figure-1).
 
-<a name="figure-1"></a>
+That's where responsiveness falls short. The contact's sidebar takes almost all the viewport, there is no space left for the user to interact with the conversation, as shown in Figure 1.
+
 ![Figure 1: WhatsApp Web responsiveness issue](https://raw.githubusercontent.com/gzitei/blog-posts/refs/heads/main/posts/how-i-fixed-whatsapp-web-for-me/images/problem.webp)
 
 ### The Solution
