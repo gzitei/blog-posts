@@ -12,7 +12,7 @@ Some time ago I came accross this interview case calsse Remove the Islands: give
 
 This is the input for the case:
 
-```
+```javascript
 [
     [1, 0, 0, 0, 0, 0],
     [0, 1, 0, 1, 1, 1],
@@ -25,7 +25,7 @@ This is the input for the case:
 
 And this is the expected output:
 
-```
+```javascript
 [
     [1, 0, 0, 0, 0, 0],
     [0, 0, 0, 1, 1, 1],
