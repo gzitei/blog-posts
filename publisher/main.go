@@ -54,7 +54,7 @@ func main() {
 
 	for _, dir := range directories {
 		dirName := path.Join("posts", dir.Name())
-		if slices.Contains(done, dirName) {
+		if slices.Contains(done, dir.Name()) {
 			continue
 		}
 
