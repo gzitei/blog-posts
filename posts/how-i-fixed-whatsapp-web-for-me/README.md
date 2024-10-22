@@ -140,3 +140,6 @@ I finished by implementing some other adjustments to improve on the apps UI in f
 If you are interested, you may check my [github repository](https://github.com/gzitei/whatsapp-web-sidebar-toggle/), there are some instructions on how to use the extension.
 
 Also, if you have suggestions or feedback about this project, feel free to reach out to me on my social media.
+
+> [!IMPORTANT]
+> TESTE!
