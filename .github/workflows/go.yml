@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build-and-update:
     runs-on: ubuntu-latest
@@ -13,6 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
         
       - name: Set up Go
         uses: actions/setup-go@v4
@@ -24,8 +25,14 @@ jobs:
           mkdir -p ./bin
           go build -o ./bin/publisher ./publisher/main.go
       
-      - name: Run the binary to update file
-        run: ./bin/publisher .
+      - name: Run the binary to update file, if posts updated
+        run: |
+          if git diff --name-only HEAD^ HEAD | grep -q "^posts/"; then
+            ./bin/publisher .
+          else
+            echo "No changes in posts directory, skipping..."
+            exit 0
+          fi
       
       - name: Commit and push changes
         run: |
