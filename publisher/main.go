@@ -7,6 +7,7 @@ import (
 	"os"
 	"path"
 	"slices"
+	"sort"
 	"strings"
 	"time"
 )
@@ -97,10 +98,16 @@ func main() {
 		post.PostedAt = strTime
 		posts.Posts = append(posts.Posts, post)
 	}
+	sort.Slice(posts.Posts, func(i, j int) bool {
+		data1, _ := time.Parse("2006-01-02", posts.Posts[i].PostedAt)
+		data2, _ := time.Parse("2006-01-02", posts.Posts[j].PostedAt)
+
+		return data1.After(data2)
+	})
 	str, err := json.MarshalIndent(posts, "", "  ")
 	if err != nil {
 		os.Stderr.WriteString(err.Error())
 		return
 	}
-	os.WriteFile(metadataJson, str, 0755)
+	os.WriteFile(metadataJson, str, 0o755)
 }
