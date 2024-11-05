@@ -22,6 +22,18 @@
         "#go"
       ],
       "image": "gopher.webp"
+    },
+    {
+      "posted-at": "2024-11-05",
+      "id": "rpa-uipath-vs-python",
+      "title": "RPA: UiPath vs Python",
+      "tags": [
+        "#oop",
+        "#python",
+        "#rpa",
+        "#uipath"
+      ],
+      "image": "rpa.webp"
     }
   ]
 }
