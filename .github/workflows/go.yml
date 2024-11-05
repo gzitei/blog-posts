@@ -2,7 +2,7 @@ name: Build and Update
 on:
   push:
     branches:
-      - test
+      - main
 
 jobs:
   build-and-update:
