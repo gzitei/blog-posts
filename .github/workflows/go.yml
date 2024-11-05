@@ -25,7 +25,7 @@ jobs:
           go build -o ./bin/publisher ./publisher/main.go
       
       - name: Run the binary to update file
-        run: ./bin/publisher
+        run: ./bin/publisher .
       
       - name: Commit and push changes
         run: |
