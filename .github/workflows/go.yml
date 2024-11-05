@@ -22,7 +22,7 @@ jobs:
       - name: Build the binary
         run: |
           mkdir -p ./bin
-          go build -o ./bin/publisher .
+          go build -o ./bin/publisher ./publisher/main.go
       
       - name: Run the binary to update file
         run: ./bin/publisher
